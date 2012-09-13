@@ -1,6 +1,6 @@
+import codecs
 import os
 import re
-import codecs
 from setuptools import setup, find_packages
 
 
@@ -18,8 +18,8 @@ def find_version(*file_paths):
 
 
 setup(
-    name="django_openstack_auth",
-    version=find_version("openstack_auth", "__init__.py"),
+    name="dreamhost_openstack_auth",
+    version=find_version("dhc_os_auth", "__init__.py"),
     url='http://django_openstack_auth.readthedocs.org/',
     license='BSD',
     description=("A Django authentication backend for use with the "
@@ -43,6 +43,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'django >= 1.4',
+        'openstack_auth',
         'python-keystoneclient'
     ],
     tests_require=[
