@@ -173,7 +173,7 @@ class OpenStackAuthTests(test.TestCase):
                             .AndReturn(scoped)
 
         client.Client(endpoint=settings.OPENSTACK_KEYSTONE_URL) \
-                .AndReturn(self.keystone_client)
+            .AndReturn(self.keystone_client)
 
         self.keystone_client.tokens.authenticate(tenant_id=tenant.id,
                                                  token=sc.get_token()['id']) \
